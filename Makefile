@@ -6,3 +6,6 @@ stop:
 	docker compose stop
 remove:
 	docker compose down
+
+compileFront:
+	docker compose run --rm node node_modules/.bin/webpack
