@@ -7,7 +7,7 @@ services:
     image: node:21-alpine3.18
     restart: unless-stopped
     volumes:
-      - ./app/wp-content/themes/dusha:/var/www/html
+      - ./app/wp-content/themes/dusha-wp-theme:/var/www/html
     working_dir: /var/www/html
 #    entrypoint: ["npm"]
 
