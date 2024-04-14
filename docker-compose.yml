@@ -33,6 +33,7 @@ services:
     image: mariadb:10.6.4-focal
     mem_limit: 2048m
     restart: unless-stopped
+    container_name: dusha-fond-mysql
     ports:
       - '3306:3306'
     env_file: .env
