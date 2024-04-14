@@ -11,3 +11,6 @@ compileFront:
 	docker compose run --rm node node_modules/.bin/webpack
 watchFront:
 	docker compose run --rm node node_modules/.bin/webpack --watch
+
+deploy:
+	./scripts/deploy.sh

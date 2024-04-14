@@ -8,3 +8,8 @@ or
 ```
 make compileFront
 ```
+
+## Deploy
+```
+make deploy
+```
