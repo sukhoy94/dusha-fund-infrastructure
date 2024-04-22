@@ -20,6 +20,12 @@ ssh -T $SSH_LOGIN@$SSH_SERVER <<EOF
     echo "Importing database dump..."
     mysql -h $REMOTE_DB_HOST -u $REMOTE_DB_USER -p$REMOTE_DB_PASSWORD $REMOTE_DB_NAME < /tmp/database_dump.sql
 
+    # Update URLs in the imported database
+    echo "Updating URLs in the imported database..."
+    mysql -h $REMOTE_DB_HOST -u $REMOTE_DB_USER -p$REMOTE_DB_PASSWORD $REMOTE_DB_NAME -e "UPDATE wp_posts SET post_content = REPLACE(post_content, 'localhost:8080', 'dusha-fund.com');"
+
+    echo "URL update complete!"
+
     # Remove the temporary dump file
     echo "Cleaning up..."
     rm /tmp/database_dump.sql
