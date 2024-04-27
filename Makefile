@@ -1,7 +1,7 @@
 build:
 	docker compose stop && docker compose build
 run:
-	docker compose stop && docker compose up -d
+	docker compose stop && docker compose up -d && make watchFront
 stop:
 	docker compose stop
 remove:
