@@ -15,8 +15,7 @@ watchFront:
 migrate_code_to_remote_server:
 	./scripts/deploy.sh
 
-sync_production_db_from_local:
-	./scripts/sync-production-db-from-local.sh
-
-sync_local_db_from_production:
+sync_local_db:
 	./scripts/sync-local-db-from-production.sh
+sync_remote_db:
+	./scripts/sync-production-db-from-local.sh
