@@ -2,3 +2,4 @@
 .idea
 scripts/.env
 scripts/backups/*
+scripts/migration_log.txt
