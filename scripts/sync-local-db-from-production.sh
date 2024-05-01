@@ -23,7 +23,7 @@ ask_for_description
 LOCAL_URL="$LOCAL_HOST:$LOCAL_PORT"
 
 # Set backup directory based on current year and month
-BACKUP_DIR="$SCRIPT_DIR/backups/$(date +'%Y/%m')"
+BACKUP_DIR="$SCRIPT_DIR/backups/$(date +'%Y/%m')/local_sync_$(date +'%Y-%m-%d_%H-%M-%S')"
 
 # Create backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
@@ -96,10 +96,12 @@ docker exec $MARIADB_CONTAINER_NAME mysql -u $LOCAL_DB_USER -p$LOCAL_DB_PASSWORD
 
 echo "URLs updated in wp_posts and wp_options tables."
 
-# Clean up local and remote database dump files
+# Clean remote database dump files
 echo "Cleaning up database dump files..."
-rm "$SCRIPT_DIR/database_dump.sql"
 ssh "$SSH_LOGIN@$SSH_SERVER" "rm database_dump.sql"
+
+# move remote dump to backups
+mv "$SCRIPT_DIR/database_dump.sql" "$BACKUP_DIR/remote_dump.sql"
 
 # Write migration log entry
 echo "" >> "$BACKUP_DIR/migration_log.txt"
