@@ -12,12 +12,11 @@ compileFront:
 watchFront:
 	docker compose run --rm node node_modules/.bin/webpack --watch
 
-deploy_only_code:
+migrate_code_to_remote_server:
 	./scripts/deploy.sh
 
-sync_production_db_with_local:
-	./scripts/sync-production-db-with-local.sh
+sync_production_db_from_local:
+	./scripts/sync-production-db-from-local.sh
 
-migrate_code_and_local_db:
-	make deploy_only_code && make sync_production_db_with_local
-
+sync_local_db_from_production:
+	./scripts/sync-local-db-from-production.sh
