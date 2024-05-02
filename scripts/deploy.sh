@@ -16,7 +16,7 @@ ssh -T $SSH_LOGIN@$SSH_SERVER <<EOF
 
     # Pull changes
     echo "Pulling changes..."
-    git pull
+    git fetch --all && git pull
 
     echo "Changes pulled successfully."
 EOF
