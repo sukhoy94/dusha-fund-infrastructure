@@ -6,7 +6,8 @@ stop:
 	docker compose stop
 remove:
 	docker compose down
-
+npm_install:
+	docker compose run --rm node npm install
 compileFront:
 	docker compose run --rm node node_modules/.bin/webpack
 watchFront:

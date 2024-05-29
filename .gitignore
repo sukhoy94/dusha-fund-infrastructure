@@ -3,3 +3,4 @@
 scripts/.env
 scripts/backups/*
 scripts/migration_log.txt
+.DS_Store
