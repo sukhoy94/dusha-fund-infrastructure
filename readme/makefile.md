@@ -15,7 +15,6 @@ This README will guide you through the setup and usage of the project.
   - [`make migrate_code_to_remote_server`](#make-migrate_code_to_remote_server)
   - [`make sync_local_db`](#make-sync_local_db)
   - [`make sync_remote_db`](#make-sync_remote_db)
-- [Usage](#usage)
 
 ## Prerequisites
 
