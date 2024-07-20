@@ -1,4 +1,5 @@
 [English version]
+
 ![Dusha Logo](https://dusha-fund.com/wp-content/themes/dusha-wp-theme/assets/images/dusha-logo.svg)
 
 ## Our goals
