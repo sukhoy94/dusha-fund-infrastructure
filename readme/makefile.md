@@ -39,3 +39,23 @@ make run
 ```
 This command stops all running Docker containers, stops any containers defined in your docker-compose.yml file, starts the containers in detached mode, and then runs the watchFront target to watch for frontend changes.
 
+### `make stop`
+This command stops the Docker containers defined in your docker-compose.yml file.
+
+```
+make stop
+```
+
+### `make remove`
+This command stops and removes the Docker containers, networks, volumes, and images defined in your docker-compose.yml file.
+
+```
+make remove
+```
+
+### `make npm_install`
+```
+make npm_install
+```
+This command runs npm install inside the node service defined in your docker-compose.yml file.
+
