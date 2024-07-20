@@ -27,6 +27,15 @@ This README will guide you through the setup and usage of the project.
 ### `make build`
 Build the Docker images for the project.
 
-```sh
+```
 make build
+```
+
+### `make run`
+Run the Docker containers for the project.
+
+```
+make run
+```
+This command stops all running Docker containers, stops any containers defined in your docker-compose.yml file, starts the containers in detached mode, and then runs the watchFront target to watch for frontend changes.
 
