@@ -59,3 +59,11 @@ make npm_install
 ```
 This command runs npm install inside the node service defined in your docker-compose.yml file.
 
+
+### `make compileFront`
+
+```
+make compileFront
+```
+
+This command runs webpack to compile the frontend assets inside the node service defined in your docker-compose.yml file.
