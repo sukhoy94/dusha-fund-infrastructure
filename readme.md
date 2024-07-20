@@ -24,5 +24,8 @@ We are multilingual. Our main language is Polish, and we also supporting english
 For translations we are using PolyLang free version
 
 ## Docs
+
+To run project locally feel free to use our Makefile:
+
 [Makefile Commands Documentation](https://github.com/sukhoy94/dusha-fund-infrastructure/blob/trunk/readme/makefile.md)
 
