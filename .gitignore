@@ -1,6 +1,6 @@
 .env
 .idea
 scripts/.env
-scripts/backups/*
+scripts/backups
 scripts/migration_log.txt
 .DS_Store
