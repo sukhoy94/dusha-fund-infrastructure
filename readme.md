@@ -1,6 +1,8 @@
-[English version]
+![Apache Badge](https://img.shields.io/badge/Apache-2.0-blue.svg)
+![PHP 8.1 Badge](https://img.shields.io/badge/PHP-8.1-blue.svg)
+![MySQL Badge](https://img.shields.io/badge/MySQL-8.0-blue.svg)
+![Docker Badge](https://img.shields.io/badge/Docker-Enabled-blue.svg)
 
-![Dusha Logo](https://dusha-fund.com/wp-content/themes/dusha-wp-theme/assets/images/dusha-logo.svg)
 ## Website
 Our website is situated under [https://dusha-fund.com](https://dusha-fund.com)
 
