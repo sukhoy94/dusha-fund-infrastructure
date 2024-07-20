@@ -4,6 +4,7 @@ This README will guide you through the setup and usage of the project.
 
 - [Prerequisites](#prerequisites)
 - [Makefile Targets](#makefile-targets)
+  - [`make help`](#make-help)
   - [`make build`](#make-build)
   - [`make run`](#make-run)
   - [`make stop`](#make-stop)
@@ -23,6 +24,15 @@ This README will guide you through the setup and usage of the project.
 - [Make](https://www.gnu.org/software/make/)
 
 ## Makefile Targets
+
+### `make help`
+
+``` 
+make help
+```
+
+List all possible commands from the Makefile
+
 
 ### `make build`
 Build the Docker images for the project.
@@ -67,3 +77,36 @@ make compileFront
 ```
 
 This command runs webpack to compile the frontend assets inside the node service defined in your docker-compose.yml file.
+
+### `make watchFront`
+
+```
+make watchFront
+```
+
+This command runs webpack --watch to watch and compile the frontend assets inside the node service defined in your docker-compose.yml file.
+
+### `make migrate_code_to_remote_server`
+
+```
+make migrate_code_to_remote_server
+```
+
+This command runs a script (./scripts/deploy.sh) to deploy the code to a remote server.
+
+
+### `make sync_local_db`
+
+```
+make sync_local_db
+```
+This command runs a script (./scripts/sync-local-db-from-production.sh) to sync the local database from the production database.
+
+
+### `make sync_remote_db`
+
+```
+make sync_remote_db
+```
+This command runs a script (./scripts/sync-production-db-from-local.sh) to sync the production database from the local database.
+
