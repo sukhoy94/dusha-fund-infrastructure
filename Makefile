@@ -1,3 +1,19 @@
+.PHONY: help build run stop remove npm_install compileFront watchFront migrate_code_to_remote_server sync_local_db sync_remote_db
+
+help:
+	@echo "Available commands:"
+	@echo ""
+	@echo "make build                     - Build the Docker images for the project."
+	@echo "make run                       - Run the Docker containers for the project."
+	@echo "make stop                      - Stop the Docker containers."
+	@echo "make remove                    - Remove the Docker containers and networks."
+	@echo "make npm_install               - Install Node.js dependencies."
+	@echo "make compileFront              - Compile the frontend assets."
+	@echo "make watchFront                - Watch and compile the frontend assets."
+	@echo "make migrate_code_to_remote_server - Deploy the code to a remote server."
+	@echo "make sync_local_db             - Sync the local database from the production database."
+	@echo "make sync_remote_db            - Sync the production database from the local database."
+
 build:
 	docker compose stop && docker compose build
 run:
