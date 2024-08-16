@@ -19,4 +19,6 @@ ssh -T $SSH_LOGIN@$SSH_SERVER <<EOF
     git fetch --all && git pull
 
     echo "Changes pulled successfully."
+
+    cd ~/domains/dusha-fund.com/public_html/wp-content/themes/dusha-wp-theme && npm install
 EOF
