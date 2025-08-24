@@ -96,6 +96,9 @@ docker exec $MARIADB_CONTAINER_NAME mysql -u $LOCAL_DB_USER -p$LOCAL_DB_PASSWORD
 
 echo "URLs updated in wp_posts and wp_options tables."
 
+echo "Updating payu options to sandbox values..."
+docker exec $MARIADB_CONTAINER_NAME mysql -u $LOCAL_DB_USER -p$LOCAL_DB_PASSWORD $LOCAL_DB_NAME -e "UPDATE wp_options SET option_value = REPLACE(option_value, '$REMOTE_URL', '$LOCAL_URL') WHERE option_name IN ('siteurl', 'home');"
+
 # Clean remote database dump files
 echo "Cleaning up database dump files..."
 ssh "$SSH_LOGIN@$SSH_SERVER" "rm database_dump.sql"
